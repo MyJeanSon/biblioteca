@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Sugerencias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Enviar Sugerencias</h1>
+        <p>Tu opinión es importante para nosotros.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="busqueda.html">Búsqueda</a></li>
+            <li><a href="sugerencias.html">Sugerencias</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Formulario de sugerencias</h2>
+            <form id="suggestionForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="suggestion">Sugerencia:</label>
+                <textarea id="suggestion" name="suggestion" required></textarea><br>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="message"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Biblioteca Pública. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

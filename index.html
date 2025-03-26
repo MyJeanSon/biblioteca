@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Biblioteca Pública</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- OneSignal SDK -->
+
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" async></script>
+<script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+        OneSignal.init({
+            appId: "a8d48e6b-a336-489b-9573-20859dd6ff50", // Reemplaza con tu App ID de OneSignal
+            allowLocalhostAsSecureOrigin: true, // Permite pruebas en localhost
+            notifyButton: {
+                enable: true // Habilita el botón de suscripción
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido a la Biblioteca Pública!</h1>
+        <p>Tu espacio para aprender, imaginar y descubrir.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="busqueda.html">Búsqueda</a></li>
+            <li><a href="sugerencias.html">Sugerencias</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Publicaciones destacadas</h2>
+            <div class="publicaciones">
+                <div class="publicacion">
+                    <img src="https://drive.google.com/uc?id=ID_DE_LA_IMAGEN_1" alt="Actividades del mes">
+                    <h3>ACTIVIDADES DEL MES</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="https://drive.google.com/uc?id=ID_DE_LA_IMAGEN_2" alt="Lecturas WhatsApp">
+                    <h3>LECTURAS WHATSAPP</h3>
+                </div>
+                <div class="publicacion">
+                    <img src="https://drive.google.com/uc?id=ID_DE_LA_IMAGEN_3" alt="Comunicados">
+                    <h3>COMUNICADOS</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Biblioteca Pública. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
