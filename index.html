@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a la Biblioteca Pública</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Biblioteca Pública</title>
 
-<<<<<<< HEAD
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-    <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(async function(OneSignal) {
-        await OneSignal.init({
-          appId: "305310af-05f0-4bec-89e9-5ee9e58431b6",
-        });
-      });
-    </script>
-=======
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "305310af-05f0-4bec-89e9-5ee9e58431b6",
-    });
-  });
+    <!-- Enlace al archivo manifest.json -->
+    <link rel="manifest" href="/biblioteca/manifest.json">
+    <meta name="theme-color" content="#007bff">
+
+<<!-- PushAlert -->
+<script type="text/javascript">
+    (function(d, t) {
+            var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+            g.src = "https://cdn.pushalert.co/integrate_c6e78f4e8bb967f8b2b652b0d59c76e0.js";
+            s.parentNode.insertBefore(g, s);
+    }(document, "script"));
 </script>
->>>>>>> a839e818c05caa97da1ff76e625812e707f82d15
+<!-- End PushAlert -->
+  <!-- Estilos básicos -->
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    h1 {
+        color: #007bff;
+    }
+</style>
 </head>
 <body>
     <header>
