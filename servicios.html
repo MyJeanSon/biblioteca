@@ -4,47 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios de la Biblioteca Pública</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar-custom {
+            background-color: #007bff;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #ffffff !important;
+        }
+        .servicios img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Servicios de la Biblioteca Pública</h1>
-        <p>Descubre todo lo que ofrecemos para ti.</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="busqueda.html">Búsqueda</a></li>
-            <li><a href="sugerencias.html">Sugerencias</a></li>
-        </ul>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Biblioteca Pública</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="busqueda.html">Búsqueda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sugerencias.html">Sugerencias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <main>
-        <section>
-            <h2>Nuestros servicios</h2>
-            <div class="servicios">
-                <div class="servicio">
-                    <img src="https://i.postimg.cc/RZ9L3cgN/melissa.png" alt="Préstamo a domicilio">
-                    <h3>Préstamo a domicilio</h3>
-                </div>
-                <div class="servicio">
-                    <img src="https://i.postimg.cc/RZ9L3cgN/melissa.png" alt="Audiolibros">
-                    <h3>Audiolibros</h3>
-                </div>
-                <div class="servicio">
-                    <img src="https://i.postimg.cc/RZ9L3cgN/melissa.png" alt="Talleres de fomento a la lectura">
-                    <h3>Talleres de fomento a la lectura</h3>
-                </div>
-                <div class="servicio">
-                    <img src="https://i.postimg.cc/RZ9L3cgN/melissa.png" alt="Aula digital">
-                    <h3>Aula digital</h3>
+
+    <!-- Encabezado -->
+    <header class="py-5 bg-light">
+        <div class="container text-center">
+            <h1 class="display-4 text-primary">Servicios de la Biblioteca Pública</h1>
+            <p class="lead">Descubre todo lo que ofrecemos para ti.</p>
+        </div>
+    </header>
+
+    <!-- Sección de servicios -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Nuestros servicios</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.postimg.cc/sXWhPGb0/prestamo-de-lib-1743379462.png" class="card-img-top" alt="Préstamo a domicilio">
+                    <div class="card-body">
+                        <h5 class="card-title">Préstamo a domicilio</h5>
+                        <p class="card-text">Lleva tus libros favoritos a casa y disfruta de una experiencia única.</p>
+                        <a href="https://i.postimg.cc/sXWhPGb0/prestamo-de-lib-1743379462.png" class="btn btn-primary">Ver más</a>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Biblioteca Pública. Todos los derechos reservados.</p>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.postimg.cc/Ghwp7804/Audiolibros.png" class="card-img-top" alt="Audiolibros">
+                    <div class="card-body">
+                        <h5 class="card-title">Audiolibros</h5>
+                        <p class="card-text">Escucha tus libros favoritos en cualquier momento y lugar.</p>
+                        <a href="https://i.postimg.cc/Ghwp7804/Audiolibros.png" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.postimg.cc/dVhSh119/Talleres-de-Fomento.png" class="card-img-top" alt="Talleres de fomento a la lectura">
+                    <div class="card-body">
+                        <h5 class="card-title">Talleres de fomento a la lectura</h5>
+                        <p class="card-text">Participa en nuestros talleres para desarrollar el hábito de la lectura.</p>
+                        <a href="https://i.postimg.cc/dVhSh119/Talleres-de-Fomento.png" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://i.postimg.cc/Pq9LdS74/Aula-Digital.png" class="card-img-top" alt="Aula digital">
+                    <div class="card-body">
+                        <h5 class="card-title">Aula digital</h5>
+                        <p class="card-text">Accede a recursos digitales y herramientas educativas en línea.</p>
+                        <a href="https://i.postimg.cc/Pq9LdS74/Aula-Digital.png" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p>&copy; 2023 Biblioteca Pública. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Bootstrap JS (con Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
