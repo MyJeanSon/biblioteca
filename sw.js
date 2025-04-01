@@ -21,9 +21,13 @@ const urlsToCache = [
 
 // Instalar el Service Worker
 self.addEventListener('install', event => {
+  console.log('Service Worker instalado');
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+      .then(cache => {
+        console.log('Archivos cacheados:', urlsToCache);
+        return cache.addAll(urlsToCache);
+      })
   );
 });
 
@@ -31,6 +35,16 @@ self.addEventListener('install', event => {
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
-      .then(response => response || fetch(event.request))
+      .then(response => {
+        if (response) {
+          console.log('Archivo servido desde caché:', event.request.url);
+          return response;
+        }
+        console.log('Archivo servido desde red:', event.request.url);
+        return fetch(event.request).catch(() => {
+          // Si no hay conexión, devuelve index.html para manejar rutas desconocidas
+          return caches.match('/index.html');
+        });
+      })
   );
 });
